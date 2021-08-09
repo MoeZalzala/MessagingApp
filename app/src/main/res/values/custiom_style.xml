@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Circular_border">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="radius_corners">
+        <item name="cornerSize">14%</item>
+    </style>
+    <style name="image_radius_corners">
+        <item name="cornerSize">28%</item>
+    </style>
+</resources>
