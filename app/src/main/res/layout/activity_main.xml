@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="580dp"
+        android:contentDescription="@string/pic_description"
+        android:scaleType="fitXY"
+        android:src="@drawable/mountains"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/second_constraint"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/base_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_Image"
+            android:layout_width="112dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="232dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/thanos"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/Circular_border" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messi left Barcelona  "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:drawableEnd="@drawable/ic_baseline_people_24"
+            android:drawableTint="@color/app_blue"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@id/user_Image"
+            app:layout_constraintTop_toTopOf="@id/user_Image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            />
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="India, Odisha"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/call_button"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:elevation="8dp"
+            android:background="@color/white"
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@drawable/ic_baseline_call_24"
+            android:tint="@color/app_blue"
+            android:layout_marginTop="24dp"
+            app:shapeAppearance="@style/Circular_border"
+            app:layout_constraintStart_toStartOf="@id/address"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/message_button"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:elevation="8dp"
+            android:background="@color/white"
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@drawable/ic_messenger"
+            android:tint="@color/app_blue"
+            android:layout_marginStart="34dp"
+            app:shapeAppearance="@style/Circular_border"
+            app:layout_constraintTop_toTopOf="@id/call_button"
+            app:layout_constraintStart_toEndOf="@id/call_button"
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/more_button"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:elevation="8dp"
+            android:background="@color/white"
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            android:tint="@color/app_blue"
+            android:layout_marginStart="34dp"
+            app:shapeAppearance="@style/Circular_border"
+            app:layout_constraintTop_toTopOf="@id/call_button"
+            app:layout_constraintStart_toEndOf="@id/message_button"
+            />
+        <TextView
+            android:id="@+id/call_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintTop_toBottomOf="@id/call_button"
+            app:layout_constraintStart_toStartOf="@id/call_button"
+            />
+
+        <TextView
+            android:id="@+id/message_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="8dp"
+            android:text="Message"
+            app:layout_constraintStart_toEndOf="@id/call_button_text"
+            app:layout_constraintTop_toBottomOf="@id/message_button" />
+        <TextView
+            android:id="@+id/more_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="More"
+            app:layout_constraintStart_toEndOf="@id/message_button_text"
+            app:layout_constraintTop_toBottomOf="@id/more_button" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:id="@+id/linear_id"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="14dp"
+            android:elevation="8dp"
+            android:padding="6dp"
+            android:background="@drawable/linear_buttons_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/message_button_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="18dp"
+            android:drawableTop="@drawable/ic_baseline_timeline_24"
+            android:text="Templates" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:drawableTop="@drawable/ic_outline_person_24"
+            android:text="Templates"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:drawableTop="@drawable/ic_baseline_people_outline_24"
+            android:text="Templates"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_outline_image_24"
+            android:text="Templates"/>
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/stalker_image"
+            android:layout_width="50dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stalker_face"
+            app:layout_constraintStart_toStartOf="@id/linear_id"
+            app:layout_constraintTop_toBottomOf="@id/linear_id"
+            app:shapeAppearance="@style/Circular_border" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:hint="Write something for Messi"
+            android:background="@drawable/edit_box_background"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.22"
+            app:layout_constraintStart_toEndOf="@id/stalker_image"
+            app:layout_constraintBottom_toTopOf="@id/collection"
+            app:layout_constraintTop_toTopOf="@id/stalker_image" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/collection"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/collection_background"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            app:layout_constraintEnd_toEndOf="@id/linear_id"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/stalker_image"
+            app:layout_constraintTop_toBottomOf="@id/stalker_image">
+
+            <TextView
+                android:id="@+id/collection_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_outline_image_24"
+                android:drawableTint="@color/app_blue"
+                android:text="Photos"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/collection"
+                app:layout_constraintStart_toStartOf="@id/collection"
+                app:layout_constraintTop_toTopOf="@id/collection" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/collection_pic1"
+                android:layout_width="81dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/iced_mocha_latte"
+                app:layout_constraintBottom_toTopOf="@id/see_more"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/collection_name"
+                app:layout_constraintVertical_bias="0.692"
+                app:shapeAppearance="@style/radius_corners" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/coca_cola"
+                android:layout_width="92dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/coca_cola"
+                app:layout_constraintStart_toEndOf="@id/collection_pic1"
+                app:layout_constraintTop_toTopOf="@id/collection_pic1"
+                app:shapeAppearance="@style/radius_corners" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="92dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/japan"
+                app:layout_constraintBottom_toTopOf="@id/see_more"
+                app:layout_constraintStart_toStartOf="@id/coca_cola"
+                app:layout_constraintTop_toBottomOf="@id/coca_cola"
+                app:shapeAppearance="@style/radius_corners" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="71dp"
+                android:layout_height="91dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/man_standing"
+                app:layout_constraintBottom_toBottomOf="@id/coca_cola"
+                app:layout_constraintStart_toEndOf="@id/coca_cola"
+                app:layout_constraintTop_toTopOf="@id/coca_cola"
+                app:layout_constraintVertical_bias="0.151"
+                app:shapeAppearance="@style/radius_corners" />
+
+            <TextView
+                android:id="@+id/see_more"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:drawableBottom="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:drawableTint="@color/black"
+                android:gravity="center"
+                android:text="See more"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/collection"
+                app:layout_constraintEnd_toEndOf="@id/collection"
+                app:layout_constraintStart_toStartOf="@id/collection" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/people_collection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:padding="8dp"
+            android:background="@drawable/collection_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/collection"
+            app:layout_constraintStart_toStartOf="@id/collection"
+            app:layout_constraintTop_toBottomOf="@id/collection" >
+
+            <TextView
+                android:id="@+id/people_collection_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Freinds"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_people_outline_24"
+                android:drawableTint="@color/app_blue"
+                app:layout_constraintTop_toTopOf="@id/people_collection"
+                app:layout_constraintStart_toStartOf="@id/people_collection"
+                app:layout_constraintEnd_toEndOf="@id/people_collection"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/person1"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearance="@style/image_radius_corners"
+                app:layout_constraintDimensionRatio="1:1"
+                android:src="@drawable/tipical_white_guy"
+                app:layout_constraintStart_toStartOf="@id/people_collection_list"
+               app:layout_constraintTop_toBottomOf="@id/people_collection_list"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Typical white"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="@id/people_collection"
+                app:layout_constraintEnd_toEndOf="@id/person1"
+                app:layout_constraintTop_toBottomOf="@id/person1"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/person2"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearance="@style/image_radius_corners"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/dinosaur_boy"
+                app:layout_constraintStart_toEndOf="@id/person1"
+                app:layout_constraintTop_toTopOf="@id/person1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dinosaur boy"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="@id/person2"
+                app:layout_constraintEnd_toEndOf="@id/person2"
+                app:layout_constraintTop_toBottomOf="@id/person2"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/person3"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/viego"
+                app:shapeAppearance="@style/image_radius_corners"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_marginStart="18dp"
+                app:layout_constraintStart_toEndOf="@id/person2"
+                app:layout_constraintTop_toTopOf="@id/person2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Viego"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="@id/person3"
+                app:layout_constraintEnd_toEndOf="@id/person3"
+                app:layout_constraintTop_toBottomOf="@id/person3"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
